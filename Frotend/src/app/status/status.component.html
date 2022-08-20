@@ -8,11 +8,15 @@ style="background-image: url('https://media.istockphoto.com/photos/sphere-backgr
 <div class="wrapper">
   <div class="container">
    <div class="row card-header rounded d-flex justify-content-between align-items-center">
+    <div class="col-md status text-center">
     <div class="col-md status text-center">{{newdata.status}}</div>
-    <div class="col text-center" [hidden]="restricted == true"><button><i class="fa-solid fa-download "></i></button>
-    </div>
+    <div class="col text-center" [hidden]="restricted == true"> <button class="approved" type="button"><i class="fa-solid fa-download "></i>Approved</button>
+    </div> 
    </div>
-   <div class="col-sm mx-1 p-2" [hidden]="restricted == true">
+      
+     
+
+   <div class="col-sm mx-1 p-2">
     <div class="id-card-holder">
      <div class="id-card"  >
       <div class="header">
@@ -22,12 +26,12 @@ style="background-image: url('https://media.istockphoto.com/photos/sphere-backgr
       <hr>
       <h6>ICT Academy of Kerala</h6>
       <p>ICTAK - Supported by Govt. of India, partnered by Govt. of Kerala and the IT industry<p>
-   
-  
       </div>
+    </div>
      </div>
     </div>
   </div>
   </div>
+ 
  
 <app-footer></app-footer>
