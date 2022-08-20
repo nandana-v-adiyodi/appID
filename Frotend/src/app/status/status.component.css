@@ -19,58 +19,18 @@
    }
 
    
-   .header img {
-    height: 100px;
+  .header img {
+    height: 75px;
        margin-top: 15px;
    }
-   
-   
-   /* body {
-    font-family:'verdana';
-   }
-   .id-card-holder {
-    width: 225px;
-       margin: 0 auto;
-       border: 3px dotted black;
-       border-radius: 10px;
-       position: relative;
-   }
-   
-   .id-card {
-    
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 1.5px 0px #b9b9b9;
-   }
-   .id-card img {
-    margin: 0 auto;
-   }
-   
-  
-   h2 {
-    font-size: 15px;
-    margin: 5px 0;
-   }
-   h3 {
-    font-size: 12px;
-    margin: 2.5px 0;
-    font-weight: 300;
-   }
-   .qr-code img{
-    width: 50px;
-   }
-   p {
-    font-size: 5px;
-    margin: 2px;
-   }
+
    button{
-       background-color: transparent;
-       border: none;
-   }
+    background-color: transparent;
+    border: 1px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
    
-   .upto{
-       font-size: xx-small;
-       font-weight : 300;
-   } */
+   
+   
+   
