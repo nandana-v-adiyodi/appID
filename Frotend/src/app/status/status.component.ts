@@ -15,18 +15,18 @@ export class StatusComponent implements OnInit {
   constructor(private student:StudentService) { }
 
   ngOnInit(): void {
-  //   this.restricted = true
-  // const id = localStorage.getItem("id") 
-  // this.student.getID(id).subscribe((data)=>{
-  //   console.log(data)
-  //   this.newdata = JSON.parse(JSON.stringify(data))
-  //   console.log(this.newdata)
-  //   this.text = `Phone : ${this.newdata.phone} | Email : ${this.newdata.email} | Batch : ${this.newdata.batch}`
-  //   if(this.newdata.status === 'Approved'){
-  //     this.restricted = false
-  //   }
+    this.restricted = true
+  const id = localStorage.getItem("id") 
+   this.student.getID(id).subscribe((data)=>{
+     console.log(data)
+     this.newdata = JSON.parse(JSON.stringify(data))
+     console.log(this.newdata)
+     this.text = `Phone : ${this.newdata.phone} | Email : ${this.newdata.email} | Batch : ${this.newdata.batch}`
+    if(this.newdata.status === 'Approved'){
+      this.restricted = false
+     }
 
-  // })
-  // }
+   })
+   }
 
 }}
