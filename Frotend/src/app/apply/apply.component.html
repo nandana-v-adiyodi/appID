@@ -1,0 +1,173 @@
+
+
+<app-header></app-header>
+
+  
+<section class="vh-100 bg-image"
+style="background-image: url('https://media.istockphoto.com/photos/abstract-plexus-technology-background-picture-id1402574896?k=20&m=1402574896&s=612x612&w=0&h=AsMsYGKBpy_UvRDSGFvK4dRk1blmO4lXJjSp4en-rqI=');">
+<div class="container h-100">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+   <div class="col-12 col-md-9 col-lg-7 col-sm-6">
+      <div class="card" style="border-radius: 15px;">
+        <!-- <div class="card-body p-5"> -->
+           <h3 class="justify-content-center">Application Form</h3>
+
+         
+          <div class="testbox">
+            <form #userreg="ngForm" (ngSubmit)="Register()" form action="/" method="post" >
+             
+              <div class="colums">
+                <div class="item">
+                  <label for="fname"> Name<span>*</span></label>
+                  <input type="text"
+                  name="name"
+                  id="Name"
+                  [(ngModel)]="data.name"
+                  #name="ngModel"
+                  [class.is-invalid]="name.invalid && name.touched"
+                  required/>
+                </div>
+
+                <div class="item">
+                  <label for="phone">Phone Number<span>*</span></label>
+                  <input type="tel"
+                  name="phone"
+                  id="phone"
+                  minlength="10"
+                  maxlength="12"
+                 
+                  [(ngModel)]="data.phone"
+                  #phone="ngModel"
+                  [class.is-invalid]="phone.invalid && phone.touched"
+                  required required/>
+                </div>
+
+                <div class="item">
+                  <label for="email">Email<span>*</span></label>
+                  <input type="email"
+                  name="email"
+                  id="email"
+                 
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                  [(ngModel)]="data.email"
+                  #email="ngModel"
+                  [class.is-invalid]="email.invalid && email.touched" required/>
+                </div>
+
+                <div class="item">
+                  <label for="photo">Photo<span>*</span></label>
+                  <input class="form-control form-control-sm"
+                  type="file"
+                  name="photo"
+                  id="file"
+                  accept=".png,.jpg,.jpeg"
+                 
+                  
+                
+                  required
+                  />
+                 
+                </div>
+                <div class="item">
+                  <label for="course">Course<span>*</span></label>
+                  <select
+                  type="text"
+                  name="course"
+                  id="course"
+                  [(ngModel)]="data.course"
+                  #course="ngModel"
+                  [class.is-invalid]="course.invalid && course.touched"
+                  required
+                >
+                  <option *ngFor="let course of courses" [value]="course" >
+                    {{ course }}
+                  </option>
+                </select>
+                  <!-- <select id="dropdown">  
+                    <option value = "selct" > Select One   
+                    </option>
+                    <option value = "FSD"> Certified Specialist In FSD   
+                    </option>  
+                    <option value = "data"> Data Science & Analytics  
+                    </option>  
+                    <option value = "cyber">  Cyber Security Analyst
+                    </option>  
+                    <option value = "AI"> Machine Learning & Artificial Intelligence 
+                    </option>
+                  </select> -->
+                  
+                </div>
+               
+
+                 <div class="item">
+                 
+                  <label for="batch">Batch<span>*</span></label>
+                  <select
+              type="text"
+              name="batch"
+              id="batch"
+              [(ngModel)]="data.batch"
+              #batch="ngModel"
+              [class.is-invalid]="batch.invalid && batch.touched"
+              required
+            >
+              <option *ngFor="let batch of batches" [value]="batch">
+                {{ batch }}
+              </option>
+            </select>
+                  <!-- <select id="dropdown">
+                    
+                    <option value = "b1">Batch 1  
+                    </option>  
+                    <option value = "b2"> Batch 2
+                    </option>  
+                    <option value = "b3"> Batch 3 
+                    </option>  
+                    <option value = "b4"> Batch 4  
+                    </option>
+                  
+                  </select> -->
+                  
+                </div>
+                
+                <div class="item">
+                  <label for="startDate">Course Starting Date<span>*</span></label>
+                  <input  type="text"
+                  name="sdate"
+                  id="sdate"
+                  
+                  onfocus="(this.type='date')"
+                  [(ngModel)]="data.startDate"
+                  #sdate="ngModel"
+                  [class.is-invalid]="sdate.invalid && sdate.touched"/>
+                </div>
+                <div class="item">
+                  <label for="endDate">Course Ending Date<span>*</span></label>
+                  <input type="text"
+                  name="edate"
+                  id="edate"
+                 
+                  onfocus="(this.type='date')"
+                  [(ngModel)]="data.endDate"
+                  #edate="ngModel"
+                  [class.is-invalid]="edate.invalid && edate.touched"
+                   required/>
+                </div>
+                
+              </div>
+              
+              <div class="btn-block">
+                <button type="submit" [disabled]="userreg.form.invalid" >Apply</button>
+              </div>
+            </form>
+         </div>
+       </div>
+      </div>
+   </div>
+ </div>
+
+
+<app-footer></app-footer> 
+
+
+
