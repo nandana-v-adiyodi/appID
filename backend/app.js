@@ -46,25 +46,41 @@ app.post("/register", (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Method:GET,POST,PUT,DELETE");
   
-  console.log(req.body)
+  studentid.find({email:req.body.data.email}).then((data)=>{
+   if(data.length!=0)
+    
+      studentid
+  .findOneAndUpdate(
+    { email: req.body.data.email },
+    {
+       $set : {
+        name:req.body.data.name,
+        email:req.body.data.email,
+        phone:req.body.data.phone,
+        photo:req.body.data.photo,
+        course:req.body.data.course,
+        batch:req.body.data.batch,
+        startDate:req.body.data.startDate,
+        endDate:req.body.data.endDate,
+       status: "Pending",
+      
+      }
 
-  var data ={
-  name:req.body.data.name,
-  email:req.body.data.email,
-  phone:req.body.data.phone,
-  photo:req.body.data.photo,
-  course:req.body.data.course,
-  batch:req.body.data.batch,
-  startDate:req.body.data.startDate,
-  endDate:req.body.data.endDate,
- status: "Pending",
-   
-}
+    }
+  )
+  .then((data) => {
+    res.send(data);
+  });
 
-var data = new studentid(data);
-data.save();
 
-});
+  else{
+    res.send(null)
+  }
+
+ })
+
+ });
+
 
 
 
