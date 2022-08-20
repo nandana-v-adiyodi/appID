@@ -1,0 +1,27 @@
+{
+  "name": "nandana",
+  "version": "1.0.0",
+  "description": "Unique Identifier Generator",
+  "main": "app.js",
+  "scripts": {
+    "serve": "webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "googleapis": "^105.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.4",
+    "nodemailer": "^6.7.7",
+    "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "https-proxy-agent": "^5.0.1",
+    "webpack": "^5.74.0",
+    "webpack-dev-server": "^4.10.0"
+  }
+}
