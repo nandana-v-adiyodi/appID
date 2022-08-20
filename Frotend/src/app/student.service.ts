@@ -18,8 +18,8 @@ constructor(private http: HttpClient) { }
      return this.http.get<any>("http://localhost:5000/idcard/:id"+id)
   }
 
-  getCourses(){
-    return this.http.get(`${this.server_address}/courses`)
+ getCourses(){
+    return this.http.get("http://localhost:5000/courses")
   }
   gettoken(){
        return localStorage.getItem("token")
