@@ -48,9 +48,7 @@ app.post("/register", (req, res) => {
   
   console.log(req.body)
 
-  
-
-var data ={
+  var data ={
   name:req.body.data.name,
   email:req.body.data.email,
   phone:req.body.data.phone,
