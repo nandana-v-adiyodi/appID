@@ -14,9 +14,9 @@ constructor(private http: HttpClient) { }
     console.log(data.data.name)
     return this.http.post<any>("http://localhost:5000/register",data)
   }
-  // getID(id:any){
-  //   return this.http.get<any>("http://localhost:5000/idcard/:id"+id)
-  // }
+   getID(id:any){
+     return this.http.get<any>("http://localhost:5000/idcard/:id"+id)
+  }
 
   getCourses(){
     return this.http.get(`${this.server_address}/courses`)
