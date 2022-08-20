@@ -81,6 +81,22 @@ app.post("/register", (req, res) => {
 
  });
 
+app.get("/register", (req, res) => {
+  studentid
+    .findOne({ status: req.params.status })
+    .then((data) => {
+      res.send(data);
+    });
+});
+
+ app.get("/register", (req, res) => {
+  studentid
+    .findOne({ _id: req.params.id })
+    .then((data) => {
+      res.send(data);
+    });
+});
+
 
 
 
